@@ -1,0 +1,69 @@
+/* Style for the AnchorPane */
+.anchor-pane {
+    -fx-background-color: #0A3353;
+}
+
+/* Style for the Label "Inscription" */
+.label-title {
+    -fx-font-family: "System Bold";
+    -fx-font-size: 19.0;
+
+}
+
+/* Style for the GridPane */
+.grid-pane {
+    -fx-padding: 20;
+}
+
+/* Style for the Text elements */
+.text {
+
+    -fx-font-size: 14px;
+}
+
+/* Style for the TextField elements */
+.text-field {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 14px;
+}
+
+/* Style for the PasswordField elements */
+.password-field {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 14px;
+}
+
+/* Style for the RadioButton elements */
+.radio-button {
+    -fx-font-size: 14px;
+
+}
+
+/* Style for the Button elements */
+.button {
+-fx-background-color : #F3F3F3;
+
+}
+.button:hover {
+-fx-background-color : #A1C1F4 ;
+}
+.button:pressed {
+-fx-background-color : #73A3EF;
+}
+/* Style for the ImageView */
+.image-view {
+    -fx-fit-height: 35px;
+    -fx-fit-width: 27px;
+}
+
+/* Style for the HBox containing Buttons */
+.hbox-buttons {
+    -fx-spacing: 10px;
+}
+
+/* Style for the HBox containing RadioButton elements */
+.hbox-radio-buttons {
+    -fx-spacing: 10px;
+}

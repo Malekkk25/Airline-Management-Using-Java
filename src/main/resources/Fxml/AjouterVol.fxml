@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="590.0" prefWidth="878.0" stylesheets="@../Css/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vols.gestionvols.controllers.AjouterVol">
+   <children>
+      <GridPane hgap="10.0" layoutX="50.0" layoutY="107.0" prefHeight="242.0" prefWidth="792.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro Vol">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="tnum" promptText="Numéro vol">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Capacité" wrappingWidth="105.8031005859375" />
+                  <TextField fx:id="tCapacite" promptText="Capacité">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aéroport Départ" />
+                  <ChoiceBox fx:id="airDep" prefHeight="26.0" prefWidth="327.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Aéroport Arrivée" />
+                  <ChoiceBox fx:id="arrivee" prefHeight="26.0" prefWidth="327.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Compagnie" />
+                  <ChoiceBox fx:id="tComp" prefHeight="26.0" prefWidth="328.0" />
+               </children>
+            </VBox>
+            <HBox prefHeight="76.0" prefWidth="315.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <GridPane hgap="5.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Depart" />
+                        <DatePicker fx:id="dDepart" prefHeight="26.0" prefWidth="201.0" promptText="Date Départ">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heure Depart" wrappingWidth="91.408203125" />
+                        <TextField fx:id="tdepart" prefHeight="26.0" prefWidth="184.0" promptText="HH:MM">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <GridPane hgap="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Arrivée" />
+                        <DatePicker fx:id="dArr" prefHeight="26.0" prefWidth="338.0" promptText="Date Arrivée">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heure Arrivée" wrappingWidth="91.408203125" />
+                        <TextField fx:id="tArrivee" promptText="HH:MM">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+      <Button fx:id="btnBack" layoutX="30.0" layoutY="530.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="45.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/56805.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane prefHeight="68.0" prefWidth="878.0" style="-fx-background-color: #2D75EB;">
+         <children>
+            <Label layoutX="30.0" layoutY="16.0" prefHeight="37.0" prefWidth="182.0" text="Ajouter Vol" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane hgap="40.0" layoutX="337.0" layoutY="521.0" prefHeight="54.0" prefWidth="221.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="80.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#ajouterVol" prefWidth="94.0" stylesheets="@../Css/styling.css" text="Ajouter" textFill="#fffafa">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#effacer" prefHeight="28.0" prefWidth="106.0" stylesheets="@../Css/styling.css" text="Effacer" textFill="#fffefe" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="listeEscale" layoutX="22.0" layoutY="365.0" prefHeight="147.0" prefWidth="672.0" stylesheets="@../Css/tableView.css">
+        <columns>
+          <TableColumn fx:id="idEscale" prefWidth="60.0" text="ID Escale" />
+          <TableColumn fx:id="airDepart" prefWidth="117.0" text="Aeroport Depart" />
+            <TableColumn fx:id="airArr" prefWidth="111.0" text="Aeroport Arrivée" />
+            <TableColumn fx:id="dateArr" prefWidth="101.0" text="Date Arrivée" />
+            <TableColumn fx:id="dateDepart" prefWidth="106.0" text="Date Départ" />
+            <TableColumn fx:id="hDepart" prefWidth="66.0" text="H Depart" />
+            <TableColumn fx:id="hArrivee" prefWidth="110.0" text="H Arrivee" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="708.0" layoutY="365.0" prefHeight="147.0" prefWidth="139.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="addEscale" mnemonicParsing="false" onAction="#ajouterEscale" prefHeight="31.0" prefWidth="135.0" stylesheets="@../Css/styling.css" text="Ajouter Escale" textFill="#f4f4f4">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateEscale" mnemonicParsing="false" onAction="#updateEscale" prefHeight="31.0" prefWidth="135.0" stylesheets="@../Css/styling.css" text="Modifier Escale" textFill="#f4f4f4" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteEscale" mnemonicParsing="false" onAction="#supprimerEscale" prefHeight="31.0" prefWidth="135.0" stylesheets="@../Css/styling.css" text="Supprimer Escale" textFill="#f4f4f4" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

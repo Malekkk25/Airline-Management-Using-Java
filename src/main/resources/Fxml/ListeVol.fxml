@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="1158.0" stylesheets="@../Css/styling.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vols.gestionvols.controllers.ListeVolController">
+   <children>
+      <AnchorPane prefHeight="560.0" prefWidth="236.0" style="-fx-background-color: #2D75EB;" stylesheets="@../Css/Styles.css">
+         <children>
+            <Button fx:id="btnVols" layoutX="11.0" layoutY="216.0" mnemonicParsing="false" onAction="#listVol" prefHeight="55.0" prefWidth="222.0" text="Liste des vols" textFill="#fcfcfc">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReser" layoutX="7.0" layoutY="298.0" mnemonicParsing="false" onAction="#listReservation" prefHeight="54.0" prefWidth="222.0" text="Liste des résevations" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/2907544.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="97.0" fitWidth="118.0" layoutX="71.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="70.4">
+               <image>
+                  <Image url="@../assets/5777264.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="44.0" fitWidth="42.0" layoutX="22.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="44.0" fitWidth="42.0" layoutX="22.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/223465.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnLogout" layoutX="1035.0" layoutY="40.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="98.0" text="Logout" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="306.0" layoutY="38.0" prefHeight="31.0" prefWidth="194.0" text="Liste des vols">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="251.0" layoutY="506.0" mnemonicParsing="false" onAction="#reserverVol" prefHeight="36.0" prefWidth="179.0" text="Reserver" textFill="#f2efef">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="44.0" fitWidth="42.0" layoutX="249.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/223465.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="welcomeText" layoutX="663.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="131.73675537109375" />
+      <Text fx:id="tid" layoutX="827.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="579.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="searchVol" layoutX="539.0" layoutY="105.0" promptText="Filtrer par date Départ" />
+      <Button fx:id="search" layoutX="743.0" layoutY="105.0" mnemonicParsing="false" onAction="#search" text="Search" textFill="#fffbfb" />
+      <TableView fx:id="listeVol" layoutX="251.0" layoutY="146.0" prefHeight="183.0" prefWidth="894.0" stylesheets="@../Css/tableView.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="36.800048828125" text="ID" />
+            <TableColumn fx:id="colNum" prefWidth="73.5999755859375" text="numero" />
+            <TableColumn fx:id="colCapacite" prefWidth="72.0" text="capacite" />
+            <TableColumn fx:id="colairD" prefWidth="73.5999755859375" text="Depart" />
+            <TableColumn fx:id="colairA" prefWidth="70.39999389648438" text="Arrivée" />
+            <TableColumn fx:id="coldDep" prefWidth="93.60003662109375" text="DateDepart" />
+            <TableColumn fx:id="colhDep" prefWidth="103.20001220703125" text="Heure Depart" />
+            <TableColumn fx:id="coletat" prefWidth="61.60009765625" text="etat" />
+            <TableColumn fx:id="dArr" prefWidth="102.4000244140625" text="Date Arrivee" />
+            <TableColumn fx:id="tArr" prefWidth="90.39984130859375" text="Arrivee" />
+            <TableColumn fx:id="colComp" prefWidth="121.60009765625" text="Compagnie" />
+         </columns>
+      </TableView>
+      <TableView fx:id="listeEscale" layoutX="338.0" layoutY="342.0" prefHeight="147.0" prefWidth="672.0" stylesheets="@../Css/tableView.css">
+         <columns>
+            <TableColumn fx:id="idEscale" prefWidth="60.0" text="ID Escale" />
+            <TableColumn fx:id="airDepart" prefWidth="117.0" text="Aeroport Depart" />
+            <TableColumn fx:id="airArr" prefWidth="111.0" text="Aeroport Arrivée" />
+            <TableColumn fx:id="dateArr" prefWidth="101.0" text="Date Arrivée" />
+            <TableColumn fx:id="dateDepart" prefWidth="106.0" text="Date Départ" />
+            <TableColumn fx:id="hDepart" prefWidth="66.0" text="H Depart" />
+            <TableColumn fx:id="hArrivee" prefWidth="110.0" text="H Arrivee" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

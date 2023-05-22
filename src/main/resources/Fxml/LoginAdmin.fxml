@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="430.0" prefWidth="698.0" styleClass="login_container" stylesheets="@../Css/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vols.gestionvols.controllers.LoginController">
+   <children>
+      <VBox layoutX="-2.0" layoutY="87.0" prefHeight="430.0" prefWidth="169.0" style="-fx-background-color: #2D75EB;" styleClass="logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="531.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="229.0" layoutY="65.0" prefHeight="296.0" prefWidth="458.0" styleClass="login_form_container" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Label text="User Name" />
+            <TextField fx:id="tname" prefWidth="214.0" promptText="User Name" styleClass="iput_field" />
+            <Label text="Password" />
+            <PasswordField fx:id="tpass" promptText="Password" styleClass="iput_field" />
+            <Label fx:id="errorText" textAlignment="CENTER" textFill="#f41515">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="70.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnCon" mnemonicParsing="false" text="Sign In">
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="32.0" fitWidth="46.0" layoutX="380.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnBack" layoutX="238.0" layoutY="374.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="45.0" />
+      <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="247.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/56805.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

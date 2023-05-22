@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="463.0" prefWidth="723.0" styleClass="login_container" stylesheets="@../Css/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vols.gestionvols.controllers.LoginUserController">
+   <children>
+      <VBox prefHeight="463.0" prefWidth="207.0" style="-fx-background-color: #2D75EB;" />
+      <VBox layoutX="244.0" layoutY="72.0" prefHeight="340.0" prefWidth="459.0" styleClass="login_form_container">
+         <children>
+            <Label text="User Name" />
+            <TextField fx:id="tname" prefWidth="214.0" promptText="User Name" styleClass="iput_field" />
+            <Label text="Password" />
+            <PasswordField fx:id="tpass" promptText="Password" styleClass="iput_field" />
+            <Button fx:id="btnCon" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="462.0" text="Sign In">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="60.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#Register" text="Register" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="btnBack" layoutX="217.0" layoutY="402.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="45.0" text="Button">
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/56805.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
